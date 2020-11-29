@@ -11,7 +11,7 @@ app.use(cors());
 
 const { getScreenByName } = require('./screens/index');
 
-app.get('/config', (req, res) => {
+app.post('/config', (req, res) => {
 	const { screenName } = req.body;
 
 	const screen = getScreenByName(screenName);
