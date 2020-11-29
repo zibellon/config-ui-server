@@ -1,7 +1,7 @@
 const body = {
 	type: 'column',
 
-	dimensions: {
+	dimens: {
 		//Ширина, Высота, отступы
 		width: '100 %',
 		height: '100 %',
@@ -11,39 +11,40 @@ const body = {
 		},
 	},
 
-	justifyContent: 'justify_between',
-	alignContent: 'center',
-	alignItems: 'center',
+	alignment: {
+		justifyContent: 'justify_between',
+		alignContent: 'center',
+		alignItems: 'center',
+	},
 
 	backgroundColor: '#FFFFFF',
-
-	// params: {
-	//     justifyContent: 'center',
-	//     backgroundColor: 'red',
-	// },
 
 	children: [
 		{
 			type: 'column',
-			dimensions: {
+			dimens: {
 				width: '100 %',
 			},
 
-			alignItems: 'center',
-			alignContent: 'center',
+			alignment: {
+				alignItems: 'center',
+				alignContent: 'center',
+			},
 
 			children: [
 				{
 					type: 'row',
-					dimensions: {
+					dimens: {
 						width: '100 %',
 						padding: {
 							top: '20 dp',
 						},
 					},
 
-					justifyContent: 'space_between',
-					alignItems: 'center',
+					alignment: {
+						justifyContent: 'space_between',
+						alignItems: 'center',
+					},
 
 					children: [
 						{
@@ -64,15 +65,17 @@ const body = {
 				},
 				{
 					type: 'row',
-					dimensions: {
+					dimens: {
 						width: '100 %',
 						padding: {
 							top: '20 dp',
 						},
 					},
 
-					justifyContent: 'space_between',
-					alignItems: 'center',
+					alignment: {
+						justifyContent: 'space_between',
+						alignItems: 'center',
+					},
 
 					children: [
 						{
@@ -93,15 +96,17 @@ const body = {
 				},
 				{
 					type: 'row',
-					dimensions: {
+					dimens: {
 						width: '100 %',
 						padding: {
 							top: '20 dp',
 						},
 					},
 
-					justifyContent: 'space_between',
-					alignItems: 'center',
+					alignment: {
+						justifyContent: 'space_between',
+						alignItems: 'center',
+					},
 
 					children: [
 						{
@@ -122,15 +127,17 @@ const body = {
 				},
 				{
 					type: 'row',
-					dimensions: {
+					dimens: {
 						width: '100 %',
 						padding: {
 							top: '20 dp',
 						},
 					},
 
-					justifyContent: 'space_between',
-					alignItems: 'center',
+					alignment: {
+						justifyContent: 'space_between',
+						alignItems: 'center',
+					},
 
 					children: [
 						{
@@ -153,24 +160,28 @@ const body = {
 				},
 				{
 					type: 'row',
-					dimensions: {
+					dimens: {
 						width: '100 %',
 						padding: {
 							top: '40 dp',
 						},
 					},
 
-					justifyContent: 'space_between',
-					alignContent: 'end',
+					alignment: {
+						justifyContent: 'space_between',
+						alignContent: 'end',
+					},
 
 					children: [
 						{
 							type: 'column',
-							dimensions: {
+							dimens: {
 								width: '50 %',
 							},
 
-							justifyContent: 'start',
+							alignment: {
+								justifyContent: 'start',
+							},
 
 							children: [
 								{
@@ -184,7 +195,7 @@ const body = {
 								{
 									type: 'text',
 
-									dimensions: {
+									dimens: {
 										margin: {
 											vertical: '10 dp',
 										},
@@ -209,12 +220,14 @@ const body = {
 		},
 		{
 			type: 'column',
-			dimensions: {
+			dimens: {
 				width: '100 %',
 			},
 
-			alignItems: 'center',
-			alignContent: 'center',
+			alignment: {
+				alignItems: 'center',
+				alignContent: 'center',
+			},
 
 			children: [
 				{
@@ -229,7 +242,9 @@ const body = {
 				{
 					type: 'text',
 
-					alignment: 'center',
+					alignment: {
+						textAlignment: 'center',
+					},
 
 					value: 'Нажимая кнопку оформить\nВы принимаете условия',
 					color: '#000000',
@@ -238,13 +253,15 @@ const body = {
 				{
 					type: 'text',
 
-					dimensions: {
+					dimens: {
 						margin: {
 							top: '10 dp',
 						},
 					},
 
-					alignment: 'center',
+					alignment: {
+						textAlignment: 'center',
+					},
 
 					value: 'публичной оферты',
 					color: '#00FF00',
