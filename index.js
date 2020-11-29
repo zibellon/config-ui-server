@@ -13,6 +13,8 @@ const { getScreenByName } = require('./screens/index');
 
 app.post('/config', (req, res) => {
 	const { screenName } = req.body;
+ 
+   console.log(screenName)
 
 	const screen = getScreenByName(screenName);
 	res.status(200).json(screen);
