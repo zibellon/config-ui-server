@@ -9,40 +9,13 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors());
 
-const { screenUI } = require('./shema.js');
+const { getScreenByName } = require('./screens/index');
 
 app.get('/config', (req, res) => {
-	const screens = {
-		ScreenAuthUI: {
-			ui: [
-				{
-					'el-name': 'text-input',
-					options: {
-						hint: '???????? ???? ?????',
-					},
-				},
-				{
-					'el-name': 'text',
-					options: {
-						text: 'Test - ????????? ????',
-						textSize: 18,
-					},
-				},
-				{
-					'el-name': 'button',
-					options: {
-						text: 'TestBTN',
-					},
-					navigateTo: 'ScreenListUI',
-				},
-			],
-		},
+	const { screenName } = req.body;
 
-		ScreenListUI: {
-			ui: [],
-		},
-	};
-	res.status(200).json(screenUI);
+	const screen = getScreenByName(screenName);
+	res.status(200).json(screen);
 });
 
 const PORT = process.env.PORT || 5000;

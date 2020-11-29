@@ -265,6 +265,4 @@ const screenUI = {
 	body,
 };
 
-module.exports = {
-	screenUI,
-};
+module.exports = screenUI;
