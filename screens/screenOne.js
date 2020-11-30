@@ -12,12 +12,12 @@ const body = {
 	},
 
 	alignment: {
-		justifyContent: 'end',
-		alignContent: 'start',
+		justifyContent: 'space_between',
+		alignContent: 'center',
 		alignItems: 'center',
 	},
 
-	backgroundColor: '#00FF00',
+	backgroundColor: '#FFFFFF',
 
 	children: [
 		{
