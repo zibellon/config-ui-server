@@ -32,7 +32,7 @@ const body = {
 			text: 'Перейти на 1 экран',
 			corners: '10 dp',
 			gradientAngle: '90',
-			backgroundColor: '#00FF00',
+			btnColor: '#00FF00',
 
 			onClick: {
 				navigateTo: 'ScreenOne',
