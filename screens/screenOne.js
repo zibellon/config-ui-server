@@ -238,6 +238,10 @@ const body = {
 					gradientAngle: '90',
 					firstColor: '#00FF00',
 					secondColor: '#11FF11',
+
+					onClick: {
+						navigateTo: 'ScreenTwo',
+					},
 				},
 				{
 					type: 'text',

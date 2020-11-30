@@ -13,10 +13,17 @@ const { getScreenByName } = require('./screens/index');
 
 app.post('/config', (req, res) => {
 	const { screenName } = req.body;
- 
-   console.log(screenName)
+
+	console.log(screenName);
 
 	const screen = getScreenByName(screenName);
+
+	if (!screen) {
+		return res.status(404).json({
+			message: 'Screen was not found',
+		});
+	}
+
 	res.status(200).json(screen);
 });
 
