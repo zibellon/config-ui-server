@@ -37,7 +37,7 @@ const body = {
 			onClick: {
 				action: 'navigateTo',
 				props: {
-					screenName: 'ScreenOne',
+					screenName: 'ScreenFour',
 				},
 			},
 		},
