@@ -240,7 +240,10 @@ const body = {
 					secondColor: '#11FF11',
 
 					onClick: {
-						navigateTo: 'ScreenTwo',
+						action: 'navigateTo',
+						props: {
+							screenName: 'ScreenTwo',
+						},
 					},
 				},
 				{
@@ -277,11 +280,11 @@ const body = {
 };
 
 const appBar = {
-    title: {
-        text: 'ScreenOne',
-        alignment: 'center',
-        color: '#000000'
-    }
+	title: {
+		text: 'ScreenOne',
+		alignment: 'center',
+		color: '#000000',
+	},
 };
 
 const screenUI = {

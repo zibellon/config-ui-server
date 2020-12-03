@@ -36,28 +36,33 @@ const body = {
 			secondColor: '#11FF11',
 
 			onClick: {
-				navigateTo: 'ScreenThree',
+				action: 'navigateTo',
+				props: {
+					screenName: 'ScreenThree',
+				},
 			},
 		},
 	],
 };
 
 const appBar = {
-    leading: {
-        type: 'back-arrow'
-    },
-    title: {
-        text: 'Screen Two',
-        alignment: 'center',
-        color: '#000000'
-    },
-    
-    actions: [
-      {
-        type: 'menu-burger',
-        onClick: 'openAlert'
-      }
-    ]
+	leading: {
+		type: 'back-arrow',
+	},
+	title: {
+		text: 'Screen Two',
+		alignment: 'center',
+		color: '#000000',
+	},
+
+	actions: [
+		{
+			type: 'menu-burger',
+			onClick: {
+				action: 'openAlert',
+			},
+		},
+	],
 };
 
 const screenUI = {

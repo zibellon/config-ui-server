@@ -35,31 +35,41 @@ const body = {
 			btnColor: '#00FF00',
 
 			onClick: {
-				navigateTo: 'ScreenOne',
+				action: 'navigateTo',
+				props: {
+					screenName: 'ScreenOne',
+				},
 			},
 		},
 	],
 };
 
 const appBar = {
-    leading: {
-        type: 'back-arrow'
-    },
-    title: {
-        text: 'Screen Three',
-        alignment: 'center',
-        color: '#000000'
-    },
-    actions: [
-      {
-        type: 'menu-burger',
-        onClick: 'openAlert'
-      },
-      {
-        type: 'menu-settings',
-        onClick: 'showToast'
-      }
-    ]
+	leading: {
+		type: 'back-arrow',
+	},
+	title: {
+		text: 'Screen Three',
+		alignment: 'center',
+		color: '#000000',
+	},
+	actions: [
+		{
+			type: 'menu-burger',
+			onClick: {
+				action: 'openAlert',
+			},
+		},
+		{
+			type: 'menu-settings',
+			onClick: {
+				action: 'showToast',
+				props: {
+					toastText: 'java sosat',
+				},
+			},
+		},
+	],
 };
 
 const screenUI = {
