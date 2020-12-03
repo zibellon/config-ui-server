@@ -276,7 +276,13 @@ const body = {
 	],
 };
 
-const appBar = {};
+const appBar = {
+    title: {
+        text: 'ScreenOne',
+        alignment: 'center',
+        color: '#000000'
+    }
+};
 
 const screenUI = {
 	name: 'ScreenOne',

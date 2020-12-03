@@ -41,7 +41,26 @@ const body = {
 	],
 };
 
-const appBar = {};
+const appBar = {
+    leading: {
+        type: 'back-arrow'
+    },
+    title: {
+        text: 'Screen Three',
+        alignment: 'center',
+        color: '#000000'
+    },
+    actions: [
+      {
+        type: 'menu-burger',
+        onClick: 'openAlert'
+      },
+      {
+        type: 'menu-settings',
+        onClick: 'showToast'
+      }
+    ]
+};
 
 const screenUI = {
 	name: 'ScreenThree',

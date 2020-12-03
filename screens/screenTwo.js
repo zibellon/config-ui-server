@@ -42,7 +42,23 @@ const body = {
 	],
 };
 
-const appBar = {};
+const appBar = {
+    leading: {
+        type: 'back-arrow'
+    },
+    title: {
+        text: 'Screen Two',
+        alignment: 'center',
+        color: '#000000'
+    },
+    
+    actions: [
+      {
+        type: 'menu-burger',
+        onClick: 'openAlert'
+      }
+    ]
+};
 
 const screenUI = {
 	name: 'ScreenTwo',
