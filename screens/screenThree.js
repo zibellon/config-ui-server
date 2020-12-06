@@ -41,6 +41,21 @@ const body = {
 				},
 			},
 		},
+     {
+  			type: 'middle-button',
+  
+  			text: 'Перейти на 1 экран',
+  			corners: '10 dp',
+  			gradientAngle: '90',
+  			btnColor: '#0000FF',
+  
+  			onClick: {
+  				action: 'navigateTo',
+  				props: {
+  					screenName: 'ScreenFive',
+  				},
+  			},
+  		},
 	],
 };
 
