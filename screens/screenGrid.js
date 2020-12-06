@@ -73,7 +73,9 @@ const screen = new Screen({
 				}),
 				onClick: {
 					action: 'navigateTo',
-					screenName: 'ScreenDetail',
+					props: {
+						screenName: 'ScreenDetail',
+					},
 				},
 				itemsCount: 20,
 			}),
