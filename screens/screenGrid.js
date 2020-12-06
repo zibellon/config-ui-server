@@ -70,11 +70,11 @@ const screen = new Screen({
 							}),
 						],
 					}),
-					onClick: {
-						action: 'navigateTo',
-						screenName: 'ScreenDetail',
-					},
 				}),
+				onClick: {
+					action: 'navigateTo',
+					screenName: 'ScreenDetail',
+				},
 				itemsCount: 20,
 			}),
 		],
