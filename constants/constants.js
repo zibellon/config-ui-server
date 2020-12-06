@@ -1,0 +1,19 @@
+const SMS_INPUT = 'SMS_INPUT';
+const PHONE_INPUT = 'PHONE_INPUT';
+const TEXT_INPUT = 'TEXT_INPUT';
+const EMAIL_INPUT = 'EMAIL_INPUT';
+const ONE_LINE = 'ONE_LINE';
+const BOLD = 'BOLD';
+const DEFAULT = 'DEFAULT';
+const ITALIC = 'ITALIC';
+
+module.exports = {
+	SMS_INPUT,
+	PHONE_INPUT,
+	TEXT_INPUT,
+	EMAIL_INPUT,
+	ONE_LINE,
+	BOLD,
+	DEFAULT,
+	ITALIC,
+};

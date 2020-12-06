@@ -1,109 +1,189 @@
-const body = {
-	type: 'column',
+// const InputText = require('../views/InputText');
+const Text = require('./../views/Text');
+const Screen = require('../views/screen/Screen');
+const AppBar = require('../views/screen/AppBar');
+const Column = require('../views/base/Column');
+const InputText = require('../views/InputText');
+const MiddleButton = require('../views/buttons/MiddleButton');
+const { PHONE_INPUT } = require('../constants/constants');
+const Spacer = require('../views/base/Spacer');
 
-	dimens: {
-		//Ширина, Высота, отступы
-		width: '100 %',
-		height: '100 %',
-	},
+// const body = {
+// 	type: 'column',
 
-	alignment: {
-		justifyContent: 'space_between',
-		alignContent: 'center',
-		alignItems: 'center',
-	},
+// 	dimens: {
+// 		//Ширина, Высота, отступы
+// 		width: '100 %',
+// 		height: '100 %',
+// 	},
 
-	backgroundColor: '#FFFFFF',
+// 	alignment: {
+// 		justifyContent: 'space_between',
+// 		alignContent: 'center',
+// 		alignItems: 'center',
+// 	},
 
-	children: [
-		{
-			type: 'column',
-			dimens: {
-				width: '100 %',
-				padding: {
-					all: '20 dp',
-				},
-			},
+// 	backgroundColor: '#FFFFFF',
 
-			children: [
-				{
-					type: 'row',
-					dimens: {
-						width: '100 %',
-					},
+// 	children: [
+// 		{
+// 			type: 'column',
+// 			dimens: {
+// 				width: '100 %',
+// 				padding: {
+// 					all: '20 dp',
+// 				},
+// 			},
 
-					children: [
-						{
-							type: 'text-input',
+// 			children: [
+// 				{
+// 					type: 'row',
+// 					dimens: {
+// 						width: '100 %',
+// 					},
 
-							hint: 'Номер телефона',
+// 					children: [
+// 						// {
+// 						// 	type: 'text-input',
 
-							typeInput: 'phone-input',
-						},
-					],
-				},
-				{
-					type: 'row',
-					dimens: {
-						width: '100 %',
-						padding: {
-							top: '14 dp',
-						},
-					},
-					children: [
-						{
-							type: 'text',
+// 						// 	hint: 'Номер телефона',
 
-							value:
-								'Нажимая на кнопку “Далее”, я соглашаюсь с данными пользовательского соглашения и условиями политики конфиденциальнсти',
-							color: '#000000',
-							size: '15 sp',
-						},
-					],
-				},
-			],
-		},
-		{
-			type: 'column',
-			dimens: {
-				width: '100 %',
-			},
+// 						// 	typeInput: 'phone-input',
+// 						// },
+// 						new InputText({
+// 							hint: 'Номер телефона',
+// 							inputType,
+// 						}),
+// 					],
+// 				},
+// 				{
+// 					type: 'row',
+// 					dimens: {
+// 						width: '100 %',
+// 						padding: {
+// 							top: '14 dp',
+// 						},
+// 					},
+// 					children: [
+// 						// {
+// 						// 	type: 'text',
 
-			children: [
-				{
-					type: 'middle-button-gradient',
+// 						// 	value:
+// 						// 		'Нажимая на кнопку “Далее”, я соглашаюсь с данными пользовательского соглашения и условиями политики конфиденциальнсти',
+// 						// 	color: '#000000',
+// 						// 	size: '15 sp',
+// 						// },
+// 						// new Text(
+// 						// 	'Нажимая на кнопку “Далее”, я соглашаюсь с данными пользовательского соглашения и условиями политики конфиденциальнсти',
+// 						// 	'#000000',
+// 						// 	'20 sp',
+// 						// ),
+// 						new Text({
+// 							value:
+// 								'Нажимая на кнопку “Далее”, я соглашаюсь с данными пользовательского соглашения и условиями политики конфиденциальнсти',
+// 						}),
+// 					],
+// 				},
+// 			],
+// 		},
+// 		{
+// 			type: 'column',
+// 			dimens: {
+// 				width: '100 %',
+// 			},
 
-					text: 'Далее',
-					gradientAngle: '90',
-					firstColor: '#EF7A47',
-					secondColor: '#FFD714',
+// 			children: [
+// 				{
+// 					type: 'middle-button-gradient',
 
-					onClick: {
-						action: 'navigateTo',
-						props: {
-							screenName: 'ScreenSms',
-						},
-					},
-				},
-			],
-		},
-	],
-};
+// 					text: 'Далее',
+// 					gradientAngle: '90',
+// 					firstColor: '#EF7A47',
+// 					secondColor: '#FFD714',
 
-const appBar = {
-	title: {
-		text: 'Регистрация',
-		alignment: 'center',
-		color: '#000000',
-	},
-};
+// 					onClick: {
+// 						action: 'navigateTo',
+// 						props: {
+// 							screenName: 'ScreenSms',
+// 						},
+// 					},
+// 				},
+// 			],
+// 		},
+// 	],
+// };
 
-const screenUI = {
+// const appBar = {
+// 	title: {
+// 		text: 'Регистрация',
+// 		alignment: 'center',
+// 		color: '#000000',
+// 	},
+// };
+
+// const screenUI = {
+// 	name: 'ScreenPhone',
+
+// 	appBar,
+
+// 	body,
+// };
+
+const screen = new Screen({
 	name: 'ScreenPhone',
+	appBar: new AppBar({
+		title: {
+			text: 'Регистрация',
+			alignment: 'center',
+			color: '#000000',
+		},
+	}),
+	body: new Column({
+		dimens: {
+			width: '100 %',
+			height: '100 %',
+		},
+		backgroundColor: '#ffffff',
+		children: [
+			new Column({
+				dimens: {
+					width: '100 %',
+					padding: {
+						all: '20 sp',
+					},
+				},
+				children: [
+					new InputText({
+						hint: 'Номер телефона',
+						inputType: PHONE_INPUT,
+					}),
+					new Text({
+						value:
+							'Нажимая на кнопку “Далее”, я соглашаюсь с данными пользовательского соглашения и условиями политики конфиденциальнсти',
+						color: '#8A8A8F',
+						size: '15 sp',
+					}),
+				],
+			}),
 
-	appBar,
+			new Spacer(),
+			new MiddleButton({
+				text: 'Далее',
+				fullWidth: true,
+				textColor: '#FFFFFF',
+				cornerRadius: '20 px',
+				colorArray: [ '#EF7A47', '#FFD714' ],
+				onClick: {
+					action: 'navigateTo',
+					props: {
+						screenName: 'ScreenSms',
+					},
+				},
+			}),
+		],
+	}),
+});
 
-	body,
-};
+module.exports = screen;
 
-module.exports = screenUI;
+// module.exports = screenUI;
